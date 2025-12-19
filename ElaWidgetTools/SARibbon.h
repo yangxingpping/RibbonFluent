@@ -2027,7 +2027,7 @@ public:
  * - `panelSpacing`
  * - `panelToolButtonIconSize`
  */
-class SA_RIBBON_EXPORT SARibbonPanel : public QFrame
+class ELA_EXPORT SARibbonPanel : public QFrame
 {
     Q_OBJECT
     SA_RIBBON_DECLARE_PRIVATE(SARibbonPanel)
@@ -2355,7 +2355,7 @@ class SARibbonCategoryLayout;
  * 当分类的内容超过其宽度时，可以通过鼠标滚轮或滚动按钮进行水平滚动。
  * 滚动行为可以通过 @ref setUseAnimatingScroll、@ref setWheelScrollStep 和 @ref setAnimationDuration 等函数进行配置。
  */
-class SA_RIBBON_EXPORT SARibbonCategory : public QFrame
+class ELA_EXPORT SARibbonCategory : public QFrame
 {
     Q_OBJECT
     SA_RIBBON_DECLARE_PRIVATE(SARibbonCategory)
@@ -3182,7 +3182,7 @@ class SARibbonTitleIconWidget;
 }
 @endcode
 */
-class SA_RIBBON_EXPORT SARibbonBar : public QMenuBar
+class ELA_EXPORT SARibbonBar : public QMenuBar
 {
     Q_OBJECT
     SA_RIBBON_DECLARE_PRIVATE(SARibbonBar)

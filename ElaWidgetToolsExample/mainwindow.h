@@ -32,6 +32,7 @@ public:
     void initWindow();
     void initEdgeLayout();
     void initContent();
+    void initRibbonBar();
 
 protected:
     virtual void mouseReleaseEvent(QMouseEvent* event);

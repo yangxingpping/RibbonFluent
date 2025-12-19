@@ -44,6 +44,8 @@ MainWindow::MainWindow(QWidget* parent)
 {
     initWindow();
 
+    initRibbonBar();
+
     //额外布局
     initEdgeLayout();
 
@@ -402,6 +404,24 @@ void MainWindow::initContent()
 
     _windowSuggestBox->addSuggestion(getNavigationSuggestDataList());
     qDebug() << "已注册的事件列表" << ElaEventBus::getInstance()->getRegisteredEventsName();
+}
+
+void MainWindow::initRibbonBar()
+{
+    auto bar = createRibbonBar();
+    bar->applicationButton()->setText(tr("&File"));
+    SARibbonCategory* mainCate = bar->addCategoryPage(tr("Main"));
+    SARibbonPanel* panel = mainCate->addPanel(tr("actions"));
+    panel->addAction(tr("action1"), QIcon(":/app/icon/action.svg"), QToolButton::InstantPopup);
+    panel->addAction(tr("action2"), QIcon(":/app/icon/customize0.svg"), QToolButton::InstantPopup);
+    panel->addAction(tr("action3"), QIcon(":/app/icon/save.svg"), QToolButton::InstantPopup);
+    panel->addAction(tr("action4"), QIcon(":/app/icon/item.svg"), QToolButton::InstantPopup, SARibbonPanelItem::Small);
+    panel->addAction(
+        tr("action5"), QIcon(":/app/icon/folder-star.svg"), QToolButton::InstantPopup, SARibbonPanelItem::Small);
+    panel->addAction(tr("action6"), QIcon(":/app/icon/test1.svg"), QToolButton::InstantPopup, SARibbonPanelItem::Small);
+    SARibbonCategory* otherCate = bar->addCategoryPage(tr("Other"));
+    SARibbonPanel* panel2 = otherCate->addPanel(tr("other"));
+    setRibbonBar(bar);
 }
 
 void MainWindow::mouseReleaseEvent(QMouseEvent* event)
