@@ -4315,7 +4315,7 @@ class QScreen;
  *
  * 此时，Ribbon的元素会通过MyRibbonFactory的接口来生成
  */
-class SA_RIBBON_EXPORT SARibbonMainWindow : public ElaWindow
+class ELA_EXPORT SARibbonMainWindow : public ElaWindow
 {
     Q_OBJECT
     SA_RIBBON_DECLARE_PRIVATE(SARibbonMainWindow)

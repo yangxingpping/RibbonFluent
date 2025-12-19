@@ -1,10 +1,14 @@
-﻿cmake_minimum_required(VERSION 3.5)
+﻿cmake_minimum_required(VERSION 3.25)
 
 project(ElaFramework VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
+
+if (MSVC)
+  add_compile_options(/MP)
+endif()
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
