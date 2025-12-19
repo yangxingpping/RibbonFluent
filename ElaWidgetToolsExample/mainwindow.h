@@ -3,6 +3,8 @@
 
 #include "ElaWindow.h"
 
+#include "SARibbon.h"
+
 #include <QMainWindow>
 class T_Home;
 class T_Icon;
@@ -19,7 +21,7 @@ class T_About;
 class T_Setting;
 class ElaContentDialog;
 
-class MainWindow : public ElaWindow
+class MainWindow : public SARibbonMainWindow
 {
     Q_OBJECT
 

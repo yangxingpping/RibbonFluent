@@ -20272,7 +20272,7 @@ void SARibbonMainWindow::PrivateData::updateTabBarBaseLineColor(SARibbonBar* bar
  * @sa SARibbonMainWindowStyleFlag, setRibbonBar(), ribbonTheme()
  */
 SARibbonMainWindow::SARibbonMainWindow(QWidget* parent, SARibbonMainWindowStyles style, const Qt::WindowFlags flags)
-    : QMainWindow(parent, flags), d_ptr(new SARibbonMainWindow::PrivateData(this))
+    : ElaWindow(parent), d_ptr(new SARibbonMainWindow::PrivateData(this))
 {
     SA_D(d);
     d->mRibbonMainWindowStyle = style;

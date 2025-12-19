@@ -9,6 +9,8 @@
 #define SA_COLOR_WIDGETS_NO_DLL
 #endif
 
+#include "ElaWindow.h"
+
 /*** Start of inlined file: SARibbonAmalgamTemplatePublicHeaders.h ***/
 // Global
 
@@ -4313,7 +4315,7 @@ class QScreen;
  *
  * 此时，Ribbon的元素会通过MyRibbonFactory的接口来生成
  */
-class SA_RIBBON_EXPORT SARibbonMainWindow : public QMainWindow
+class SA_RIBBON_EXPORT SARibbonMainWindow : public ElaWindow
 {
     Q_OBJECT
     SA_RIBBON_DECLARE_PRIVATE(SARibbonMainWindow)
