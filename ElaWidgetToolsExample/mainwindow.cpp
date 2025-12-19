@@ -44,13 +44,13 @@ MainWindow::MainWindow(QWidget* parent)
 {
     initWindow();
 
-    initRibbonBar();
+    
 
     //额外布局
     initEdgeLayout();
 
     //中心窗口
-    initContent();
+    //initContent();
 
     // 拦截默认关闭事件
     _closeDialog = new ElaContentDialog(this);
@@ -63,6 +63,8 @@ MainWindow::MainWindow(QWidget* parent)
     connect(this, &MainWindow::closeButtonClicked, this, [=]() {
         _closeDialog->exec();
     });
+
+    initRibbonBar();
 
     //移动到中心
     //moveToCenter();
@@ -96,7 +98,9 @@ void MainWindow::initWindow()
     setUserInfoCardPixmap(QPixmap(":/Resource/Image/Cirno.jpg"));
     setUserInfoCardTitle("Ela Tool");
     setUserInfoCardSubTitle("Liniyous@gmail.com");
-    setWindowTitle("ElaWidgetTool");
+    //setWindowTitle("ElaWidgetTool3");
+
+    return;
     // setIsStayTop(true);
     // setUserInfoCardVisible(false);
     // setNavigationBarWidth(260);
@@ -411,7 +415,7 @@ void MainWindow::initRibbonBar()
     auto bar = createRibbonBar();
     bar->applicationButton()->setText(tr("&File"));
     SARibbonCategory* mainCate = bar->addCategoryPage(tr("Main"));
-    SARibbonPanel* panel = mainCate->addPanel(tr("actions"));
+    SARibbonPanel* panel = mainCate->addPanel(tr(""));
     panel->addAction(tr("action1"), QIcon(":/app/icon/action.svg"), QToolButton::InstantPopup);
     panel->addAction(tr("action2"), QIcon(":/app/icon/customize0.svg"), QToolButton::InstantPopup);
     panel->addAction(tr("action3"), QIcon(":/app/icon/save.svg"), QToolButton::InstantPopup);

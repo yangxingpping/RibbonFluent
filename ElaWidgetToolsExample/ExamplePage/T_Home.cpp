@@ -61,7 +61,7 @@ T_Home::T_Home(QWidget* parent)
     urlCard2->setSubTitleSpacing(13);
     urlCard2->setUrl("https://space.bilibili.com/21256707");
     urlCard2->setCardPixmap(QPixmap(":/Resource/Image/Moon.jpg"));
-    urlCard2->setTitle("ElaWidgetTool");
+    urlCard2->setTitle("ElaWidgetTool1");
     urlCard2->setSubTitle("80985@qq.com");
 
     ElaScrollArea* cardScrollArea = new ElaScrollArea(this);
@@ -101,7 +101,7 @@ T_Home::T_Home(QWidget* parent)
         QDesktopServices::openUrl(QUrl("https://github.com/Liniyous/ElaWidgetTools"));
     });
     homeCard->setCardPixmap(QPixmap(":/Resource/Image/Cirno.jpg"));
-    homeCard->setTitle("ElaWidgetTool");
+    homeCard->setTitle("ElaWidgetTool2");
     homeCard->setSubTitle("5.0⭐ 实用程序与工具");
     homeCard->setInteractiveTips("免费下载");
     homeCard->setDetailedText("ElaWidgetTools致力于为QWidget用户提供一站式的外观和实用功能解决方案,只需数十MB内存和极少CPU占用以支持高效而美观的界面开发");
